@@ -1,0 +1,256 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(25, 63, 112);
+    font-family: 'Russo One', sans-serif;
+}
+#Title{
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    background-color: rgb(33, 83, 148);
+    width: 620px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+    padding-top: 10px;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+#Table{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-template-rows: repeat(3,150px);
+    background-color: rgb(25, 63, 112);
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: bold;
+    font-size: 23px;
+}
+#Up{
+    grid-column-start: 2;
+    background-color: rgb(165, 155, 136);
+    padding-top: 60px;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px;
+}
+#Left{
+    grid-column-start: 1;
+    grid-row-start: 2;
+    background-color: rgb(165, 155, 136);
+    padding-top: 60px;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+}
+#TextContent{
+    position: absolute;
+    top:5px;
+    left: 5px;
+    background-color: thistle;
+    width: 140px;
+    height: 140px;
+    z-index: 100;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+#Text{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: rgb(165, 155, 136);
+    padding-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    z-index: 17;
+}
+#TextAfter{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 5px;
+    box-sizing: border-box;
+    height: 5px;
+    background-color: rgb(60, 127, 204);
+    z-index: 10;
+    animation: Druga 1.7s  linear ;
+    animation-fill-mode: forwards;
+}
+#TextBefore{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 5px;
+    box-sizing: border-box;
+    height: 5px;
+    background-color: rgb(60, 127, 204);
+    z-index: 10;
+    animation: Pierwsza 1.7s  linear ;
+   animation-fill-mode: forwards;
+}
+
+#Right{
+    grid-column-start: 3;
+    grid-row-start: 2;
+    background-color: rgb(165, 155, 136);
+    padding-top: 60px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+}
+#Down{
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: rgb(165, 155, 136);
+    padding-top: 60px;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+}
+#ContainerCurtain{
+    width: 600px;
+    height: 400px;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    background-color: rgb(47, 76, 85);
+    border-radius: 30px;
+    opacity: 1;
+    z-index: 1000;
+    transition: 1s;
+    display: none;
+    animation: Przezroczystosc .3s  linear ;
+   animation-fill-mode: forwards;
+}
+#Curtain{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color: rgb(42, 44, 46);
+     z-index: 1000;
+    transition: 1s;
+    display: none;
+    animation: Przezroczystosc .3s  linear ;
+   animation-fill-mode: forwards;
+}
+#TextCurtain{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    display: none;
+    animation: Przezroczystosc .3s  linear ;
+   animation-fill-mode: forwards;
+}
+#PlayAgain{
+    width: 340px;
+    height: 50px;
+    margin-left: 130px;
+    margin-top:50px;
+    background-color:rgb(255, 255, 255) ;
+    color:rgb(51, 64, 80);
+    font-size: 30px;
+    text-align: center; 
+    border: 0 solid black;
+    border-radius: 10px;
+    animation: Przezroczystosc .3s  linear ;
+   animation-fill-mode: forwards;
+    
+}
+#GameCounter{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(121, 121, 121);
+
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+  /* animation: kolo 3s 1;
+  animation-fill-mode: forwards;     */
+
+
+  @keyframes Pierwsza{
+    0%{
+        /* transform: translateX(-30px) translateY(-30px);
+        border-radius: 50%; */
+        left: 5px;
+        
+    }
+   
+    25%{
+        top:0;
+        left: 5px;
+        width: 145px;
+        height: 5px;
+    }
+ 
+    50%{
+        height: 145px;
+        
+        
+        
+    }
+
+    100%{
+        top:0;
+        left: 5px;
+        width: 145px;
+        height: 145px;
+    }
+    }
+    @keyframes Druga{
+        0%{
+            background-color: transparent;
+            top:140px;
+            left: 140px;
+        }
+        49%{
+            top:140px;
+            left: 140px; 
+            background-color: transparent;
+        }
+        50%{
+            top:145px;
+            left: 145px;
+            background-color: rgb(60, 127, 204); 
+        }
+        75%{
+            width: 150px;
+            top:145px;
+            left: 0px;
+        }
+        100%{
+            top:0;
+            left: 0px;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(60, 127, 204);
+        }
+        }
+        @keyframes Przezroczystosc{
+            0%{
+                opacity: 0;
+            }
+         
+            100%{
+             opacity: 100%;
+            }
+            }
+        
